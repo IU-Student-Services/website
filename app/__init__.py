@@ -1,4 +1,3 @@
-import os
 from flask import Flask
 from authlib.integrations.flask_client import OAuth
 from config import client_id, client_secret, redirect_uri, authorize_url, token_url, scope, secret_key
