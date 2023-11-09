@@ -5,7 +5,7 @@
 
     <!-- Styling -->
     <link rel="stylesheet" href="https://unpkg.com/chota@latest">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
     <link rel="icon" type="image/x-icon" href="favicon.svg">
     <style>
         body.dark {
@@ -16,12 +16,6 @@
             --color-darkGrey: #777;
         }
     </style>
-    <script>
-        if (window.matchMedia &&
-            window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.body.classList.add('dark');
-        }
-    </script>
 </head>
 
 <body id="top" class="dark">
@@ -34,12 +28,15 @@
           </nav> -->
         <div class="hero is-full-screen">
             <div class="logo is-center is-vertical-align">
-                <img src="favicon.svg" alt="Indiana Univeristy logo" width="5%" />
+                <img src="{{ url_for('static', filename='img/favicon.svg')}}" alt="Indiana Univeristy logo" width="5%" />
               <h3>IU <strong>student</strong> ran services.</h3>
               <small><em>We help students run services for IU and more</em></small>
               <br />
 
-              <small>Need help with hosting? <em><a href="mailto:contact@iu.run">Contact Us!</a></em></small>
+              <small>Need help with hosting?
+                <br />
+                <em><a href="/login">login to leave a message!</a></em>
+            </small>
             </div>
           </div>
     </header>

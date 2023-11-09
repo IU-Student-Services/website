@@ -1,0 +1,8 @@
+# OIDC Configuration
+client_id = ""
+client_secret = ""
+redirect_uri = ""
+authorize_url = ""
+token_url = ""
+scope = ["openid",]
+secret_key = "kjbddbkdfnbkjbdfndbkjfn"
