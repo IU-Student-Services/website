@@ -5,6 +5,8 @@ import os
 
 @app.route('/')
 def homepage():
+    if session.get('user_info'):
+        return redirect(url_for('authenticated'))
     return render_template('home.html')
 
 
